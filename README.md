@@ -1,27 +1,43 @@
-# React + TypeScript + Vite
+# My App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a multi-user application that allows users to create posts and fetches a list of posts from a backend server in batches of 10 based on the latest and renders the post in a React JS SPA application. The app has signup, login, and password reset capability. The post consists of a minimum of two pictures and a maximum of six pictures, a short text as post description of 160 words, and the time the post was created. The user information includes first name, last name, phone number, gender, and password. Login criteria is phone number and password. The user's own post does not appear in the list of posts, but other users' posts are okay. The app uses JWT tokens for session management, and the user can login and logout. The app allows the user to post from the frontend manually, and the database has a list of posts not less than 200. The app automatically loads more items in the frontend when you reach the bottom, and the user can refresh the list of posts. The app has API documentation.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run the app locally, you will need to have Node.js and MongoDB installed on your system. You can download Node.js from the official website (https://nodejs.org/) and MongoDB from the official website (https://www.mongodb.com/).
 
-## Expanding the ESLint configuration
+Once you have Node.js and MongoDB installed, you can clone the repository and install the dependencies:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+git clone https://github.com/valenciatv001/DirexWebapp.git
+cd your-repo
+npm install
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+## Configuration
+
+Before you can run the app, you will need to configure some environment variables. Create a `.env` file in the root directory of the project and add the following variables:
+
+
+PORT=3000
+MONGODB_URI=mongodb://localhost/my-app
+JWT_SECRET=my-secret
+
+
+
+
+
+Replace `my-app` with the name of your MongoDB database and `my-secret` with a secret string of your choice.
+
+## Running the app
+
+To run the app, use the following command:
+
+
+This will start the backend server and the frontend server. You can access the app in your web browser at http://localhost:3000.
+
+## API documentation
+
+The API documentation is available at http://localhost:3000/api-docs. You can use this documentation to learn about the API endpoints and how to use them.
