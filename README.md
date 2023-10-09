@@ -10,7 +10,7 @@ Once you have Node.js and MongoDB installed, you can clone the repository and in
 
 
 
-git clone https://github.com/valenciatv001/DirexWebapp.git
+git clone https://github.com/valenciatv001/Direx-Webapp.git
 cd your-repo
 npm install
 
